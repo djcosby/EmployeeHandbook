@@ -1,0 +1,5 @@
+{
+  "name": "Unified Operations & Quality Handbook",
+  "description": "A dynamic, searchable web application for the Unified Operations & Quality Handbook, designed for daily use by clinical and administrative staff. Includes supervisor-specific views and a feedback mechanism.",
+  "requestFramePermissions": []
+}

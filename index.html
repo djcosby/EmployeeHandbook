@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unified Operations & Quality Handbook</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'brand-bg-start': '#0f172a',
+              'brand-bg-end': '#030712',
+              'brand-surface': 'rgba(15, 23, 42, 0.35)',
+              'brand-sidebar-start': 'rgba(15, 23, 42, 0.85)',
+              'brand-sidebar-end': 'rgba(15, 23, 42, 0.3)',
+              'brand-ink': '#0f172a',
+              'brand-ink-light': '#e2e8f0',
+              'brand-muted': '#64748b',
+              'brand-line': '#e2e8f0',
+              'brand-accent': '#0f766e',
+              'brand-accent-soft': 'rgba(15, 118, 110, 0.12)',
+              'brand-accent-active': 'rgba(15, 118, 110, .28)',
+              'brand-accent-border': 'rgba(15, 118, 110, .45)',
+              'brand-content-start': '#e2e8f0',
+              'brand-content-end': '#edf2ff',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      :root{
+        --forest:#1f5135;
+        --forest-dark:#153a26;
+        --forest-mid:#2d6a48;
+        --ink:#0f172a;
+        --line:#d1d5db;
+      }
+      .page{
+        font-family:'Times New Roman',Times,serif;
+        line-height:1.6;
+        color:var(--ink);
+        background:#fff;
+        border:1px solid var(--line);
+        border-radius:12px;
+        margin:0 auto;
+        padding:0.75in;
+        box-sizing:border-box;
+        page-break-after:always
+      }
+      .header{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;border-bottom:2px solid var(--forest-mid);padding-bottom:10px;margin-bottom:14px}
+      .brand{display:flex;gap:12px;align-items:center}
+      .logo{width:40px;height:40px;border-radius:8px;background:linear-gradient(135deg,var(--forest),var(--forest-dark));display:grid;place-items:center;color:#fff;font-weight:700}
+      .h1{font-size:20pt;font-weight:700;letter-spacing:.2px;margin-top:-2px}
+      .muted{font-size:10pt;color:#475569}
+      .meta{text-align:right;font-size:10pt;color:#334155;display:grid;gap:4px}
+      .title{text-align:center;font-size:16pt;color:var(--forest);margin:8px 0 6px 0}
+      .columns{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+      .line{display:inline-block;border-bottom:1px solid #111827;height:0;transform:translateY(-3px)}
+      .section{margin:10px 0}
+      .legend{font-weight:700;color:var(--forest-dark);border-left:3px solid var(--forest-mid);padding-left:8px;margin-bottom:6px}
+      .box{border:1px solid var(--line);border-radius:8px;background:#fafdfb}
+      .table{width:100%;border-collapse:collapse;margin:8px 0;font-size:11pt}
+      .table th,.table td{border:1px solid var(--line);padding:6px;vertical-align:top}
+      .checks.two{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+      .checks.one{display:grid;grid-template-columns:1fr;gap:6px}
+      .chk{display:flex;gap:8px;align-items:center}
+      .cb{width:16px;height:16px;border:1.4px solid #0f1a14;border-radius:3px;display:inline-block}
+      .sig-grid{display:grid;grid-template-columns:1fr;gap:10px;margin-top:12px}
+      .sig-grid.two{grid-template-columns:1fr 1fr}
+      .sigline{border-bottom:1.4px solid #111827;height:26px}
+      .siglbl{font-size:10pt;color:#334155}
+      .footer{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding-top:8px;margin-top:12px;font-size:9pt;color:#425466}
+      .note{font-size:10pt;background:#eef7f0;border-left:3px solid var(--forest-mid);padding:6px 8px;border-radius:6px;margin:8px 0}
+
+      @media print {
+        body.is-printing .non-printable {
+          display: none !important;
+        }
+        body.is-printing #printable-content-wrapper {
+          display: block !important;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          overflow: visible;
+        }
+        body.is-printing .printable-area {
+            display: block !important;
+            padding: 0 !important;
+            background: white !important;
+        }
+        .printall{display:none}
+        .page{border:none !important; border-radius:0 !important; margin:0 !important; padding:0 !important; box-shadow:none !important;}
+        @page{
+          size:A4;
+          margin:0.75in;
+        }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-brand-bg-start">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
